@@ -32,7 +32,17 @@
           <span class="input-icon"><i class="fa-solid fa-envelope"></i></span
           ><br />
 
-          <input name="password" type="text" placeholder="Password" />
+          <!-- Passwords must be at least 12 characters long. -->
+          <!-- Passwords must have at least one uppercase and one lowercase letter. -->
+          <!-- Passwords must contain at least one number. -->
+          <!-- Passwords must contain at least one special character. -->
+          <!-- pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$" -->
+
+          <input name="password" type="text" placeholder="Password" minlength="12"
+          pattern="^(?=.*[a-z])(?=.*[A-Z]).{8,}$" pattern="(?=.*\d)" min="1"
+         
+          />
           <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
 
           <input
